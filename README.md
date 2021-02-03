@@ -12,5 +12,7 @@ npm start
 
 ### Debugging
 
+The important code is in `/src/App`.
+
 Pay attention to the console for debug messages. If you don't see them, make
 sure your dev console is set to show ALL log levels.
