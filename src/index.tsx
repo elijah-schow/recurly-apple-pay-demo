@@ -1,14 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { RecurlyProvider, Elements } from "@recurly/react-recurly";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RecurlyProvider publicKey={process.env.REACT_APP_RECURLY_PUBLIC_KEY ?? ""}>
+      <Elements>
+        <App />
+      </Elements>
+    </RecurlyProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
